@@ -1,0 +1,30 @@
+@import "config";
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: $footer-color;
+
+  nav {
+    @include maxWidth;
+    padding: 1rem 0 2rem;
+
+    .logo-link {
+      font-family: Shrikhand;
+      color: #fff;
+      font-size: 1.3rem;
+    }
+
+    ul {
+      margin-top: 1rem;
+
+      li {
+        margin-bottom: 0.5rem;
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

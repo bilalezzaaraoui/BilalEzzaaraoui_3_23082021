@@ -1,0 +1,223 @@
+@import "config";
+@import "buttons";
+@import "footer";
+@import "mediaQueries";
+@import "menu/menuBody";
+@import "menu/menuHeader";
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.home_header {
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 3px 4px -4px gray;
+  @include flexCenter;
+
+  .home_logo {
+    @include flexCenter;
+
+    img {
+      width: 9rem;
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.city {
+  width: 100%;
+  height: 40px;
+  background-color: $city-color;
+  @include flexCenter;
+
+  i {
+    font-size: 1rem;
+    padding-right: 0.6rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  background-color: $grey-color;
+  @include flexCenter;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 20%;
+    margin-top: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1%;
+    margin-top: 0.5rem;
+  }
+
+  .btn-food {
+    margin: 1.5rem 0 2.5rem;
+  }
+}
+
+.filter {
+  @include maxWidth;
+  padding-bottom: 2.5rem;
+
+  h2 {
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &-card {
+    width: 90%;
+    height: auto;
+    background-color: $grey-color;
+    padding: 1.5rem;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    border-radius: 20px;
+    position: relative;
+
+    .filter-icon {
+      width: 10%;
+      height: 100%;
+      @include flexCenter;
+
+      i {
+        color: $filter-icon-color;
+        font-size: 1.3rem;
+      }
+    }
+
+    .filter-text {
+      width: 90%;
+      display: flex;
+      align-items: center;
+
+      p {
+        padding-left: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    .number {
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      background-color: $first-color;
+      border-radius: 50%;
+      position: absolute;
+      left: -10px;
+    }
+
+    &:hover {
+      background-color: #f5edff;
+
+      .filter-icon {
+        i {
+          color: $first-color;
+        }
+      }
+    }
+  }
+}
+
+.restaurant {
+  width: 100%;
+  height: auto;
+  background-color: $grey-color;
+  padding-bottom: 2.5rem;
+
+  &-layout {
+    @include maxWidth;
+
+    h2 {
+      padding: 3rem 0 1.5rem;
+    }
+
+    .food-card {
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      height: 250px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+
+      .food-img {
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+        @include flexCenter;
+        padding-bottom: 4rem;
+        position: relative;
+
+        img {
+          width: 100%;
+        }
+
+        div {
+          position: absolute;
+          top: 15px;
+          right: 10px;
+          background-color: $third-color;
+          border-radius: 2px;
+
+          p {
+            color: #088c6b;
+            font-weight: 500;
+            font-size: 0.8rem;
+            padding: 0.3rem 0.5rem;
+          }
+        }
+      }
+
+      .food-text {
+        width: 100%;
+        height: 30%;
+        background-color: #fff;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+
+        .info-food {
+          width: 80%;
+          height: 100%;
+
+          h3 {
+            margin-bottom: 3px;
+          }
+        }
+
+        .like-food {
+          width: 20%;
+          height: 100%;
+          @include flexCenter;
+
+          i {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
