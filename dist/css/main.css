@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Couleurs */
 /* Layout */
 * {
@@ -58,11 +59,394 @@ footer nav ul li a {
   color: #fff;
 }
 
+/* Le sité à été créer sur un modèle "mobile-m" */
+@media (min-width: 290px) and (max-width: 319px) {
+  /* --Index.html-- */
+  /* Section filtre */
+  .filter-card .filter-text p {
+    font-size: 0.9rem;
+  }
+  /* Section Menu */
+  .restaurant-layout .food-card .food-img img {
+    position: static !important;
+    /* bottom: 1rem; */
+  }
+  /* --Page Menu-- */
+  .menu-margin-1 {
+    bottom: 6rem;
+    margin-bottom: -6rem;
+  }
+  .menu-margin-2 {
+    bottom: 5rem;
+    margin-bottom: -5rem;
+  }
+  .menu-margin-3 {
+    bottom: 5rem;
+    margin-bottom: -5rem;
+  }
+  .menu-margin-4 {
+    bottom: 5rem;
+    margin-bottom: -5rem;
+  }
+  .menu-title h2 {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media (min-width: 320px) {
+  /* --Page Menu-- */
+  .menu-margin-1 {
+    bottom: 5.5rem;
+    margin-bottom: -5.5rem;
+  }
+  .menu-margin-2 {
+    bottom: 2.5rem;
+    margin-bottom: -2.5rem;
+  }
+  .menu-margin-3 {
+    bottom: 5rem;
+    margin-bottom: -5rem;
+  }
+  .menu-margin-4 {
+    bottom: 5rem;
+    margin-bottom: -5rem;
+  }
+  .menu-title h2 {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media (min-width: 375px) {
+  /* --Page Menu-- */
+  .menu-margin-1 {
+    bottom: 5rem;
+    margin-bottom: -5rem;
+  }
+  .menu-margin-2 {
+    bottom: 2.5rem;
+    margin-bottom: -2.5rem;
+  }
+  .menu-margin-3 {
+    bottom: 3rem;
+    margin-bottom: -3rem;
+  }
+  .menu-margin-4 {
+    bottom: 2.5rem;
+    margin-bottom: -2.5rem;
+  }
+}
+
+@media (min-width: 425px) {
+  /* --Page Menu-- */
+  .menu-margin-1 {
+    bottom: 3rem;
+    margin-bottom: -3rem;
+  }
+  .menu-margin-2 {
+    bottom: 0rem;
+    margin-bottom: -0rem;
+  }
+  .menu-margin-3 {
+    bottom: 1rem;
+    margin-bottom: -1rem;
+  }
+  .menu-margin-4 {
+    bottom: 0.5rem;
+    margin-bottom: -0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* --Index-- */
+  .hero {
+    height: 350px !important;
+  }
+  .hero h1 {
+    font-size: 1.8rem !important;
+  }
+  /* Filter */
+  .filter-layout {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .filter-layout .filter-card {
+    padding: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .filter-layout .filter-card .filter-icon i {
+    font-size: 2.5rem !important;
+  }
+  .filter-layout .filter-card .filter-text p {
+    padding-left: 0 !important;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .filter-layout .filter-card .number {
+    left: auto;
+    top: -10px;
+  }
+  /* Menu */
+  .restaurant-layout h2 {
+    font-size: 2rem;
+  }
+  .grid-menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 15px;
+  }
+  /* Footer */
+  footer nav ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .filter-text {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* Couleurs */
+/* Layout */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  overflow: hidden;
+}
+
+main .menu-hero {
+  width: 100%;
+  height: 280px;
+  z-index: -1;
+}
+
+main .menu-hero img {
+  width: 100%;
+}
+
+main .menu-hero .img-menu-2 {
+  position: relative;
+  bottom: 8rem;
+}
+
+main .menu {
+  width: 100%;
+  height: auto;
+  background-color: #f6f6f6;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+  position: relative;
+  padding: 1.5rem;
+  z-index: 1;
+}
+
+main .menu-title {
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .menu-title h2 {
+  width: 80%;
+  font-family: Shrikhand;
+  font-size: 1.5rem;
+}
+
+main .menu-title i {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+}
+
+main .menu-card-info {
+  margin-top: 1.5rem;
+}
+
+main .menu-card-info h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-left: 0.2rem;
+}
+
+main .menu-card-info span {
+  display: block;
+  margin: 0.2rem 0rem 0 0.2rem;
+  width: 15%;
+  height: 3px;
+  background-color: #99e2d0;
+}
+
+main .menu-card-info .menu-price {
+  width: 100%;
+  height: auto;
+  margin: 0.8rem 0;
+  background-color: #fff;
+  padding: 0.7rem 0.5rem;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 3px 4px -4px gray;
+          box-shadow: 0 3px 4px -4px gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .menu-card-info .menu-price-text {
+  width: 70%;
+  height: 100%;
+}
+
+main .menu-card-info .menu-price-text h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main .menu-card-info .menu-price-text p {
+  margin-top: 0.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main .menu-card-info .menu-price-info {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .menu-card-info .menu-price-info p {
+  font-weight: 500;
+  padding-right: 1rem;
+}
+
+main .menu .btn-layout {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .menu .btn-layout .btn-menu {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .menu .btn-layout .btn-menu:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+/* Couleurs */
+/* Layout */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.menu_header {
+  width: 100%;
+  height: 60px;
+  -webkit-box-shadow: 0 3px 4px -4px gray;
+          box-shadow: 0 3px 4px -4px gray;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_header nav {
+  position: absolute;
+  left: 1.5rem;
+}
+
+.menu_header nav a i {
+  padding-top: 10px;
+}
+
+.menu_header .home_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_header .home_logo img {
+  width: 9rem;
+  padding-top: 0.4rem;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
 
 a {
+  color: #000;
   text-decoration: none;
 }
 
@@ -287,12 +671,17 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 4rem;
   position: relative;
 }
 
 .restaurant-layout .food-card .food-img img {
   width: 100%;
+  position: relative;
+  bottom: 1rem;
+}
+
+.restaurant-layout .food-card .food-img .index-img-2 {
+  bottom: 1.5rem;
 }
 
 .restaurant-layout .food-card .food-img div {
