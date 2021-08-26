@@ -59,6 +59,7 @@ footer nav ul li a {
   color: #fff;
 }
 
+@use 'config';
 /* Le sité à été créer sur un modèle "mobile-m" */
 @media (min-width: 290px) and (max-width: 319px) {
   /* --Index.html-- */
@@ -94,6 +95,9 @@ footer nav ul li a {
 }
 
 @media (min-width: 320px) {
+  .food-card .food-img img {
+    position: initial !important;
+  }
   /* --Page Menu-- */
   .menu-margin-1 {
     bottom: 5.5rem;
@@ -159,7 +163,7 @@ footer nav ul li a {
 @media (min-width: 768px) {
   /* --Index-- */
   .hero {
-    height: 350px !important;
+    height: 350px;
   }
   .hero h1 {
     font-size: 1.8rem !important;
@@ -188,7 +192,7 @@ footer nav ul li a {
             align-items: center;
   }
   .filter-layout .filter-card .filter-icon i {
-    font-size: 2.5rem !important;
+    font-size: 2rem;
   }
   .filter-layout .filter-card .filter-text p {
     padding-left: 0 !important;
@@ -226,6 +230,185 @@ footer nav ul li a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .grid-menu {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .number {
+    font-size: 1rem !important;
+  }
+  .city i {
+    font-size: 1.2rem;
+  }
+  .city p {
+    font-size: 1.2rem;
+  }
+  .food-text .info-food h3 {
+    font-size: 1rem;
+  }
+  .food-text .like-food i {
+    font-size: 1.2rem;
+  }
+  .food-img img {
+    height: 100% !important;
+    position: static !important;
+  }
+  .food-img .index-img-2 {
+    height: auto !important;
+    position: relative !important;
+  }
+  /* Page Menu */
+  main .menu-hero {
+    height: 500px !important;
+    overflow: hidden;
+  }
+  main .menu {
+    max-width: 70%;
+    margin: auto;
+    bottom: 20rem !important;
+    margin-bottom: -20rem !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .restaurant-layout .food-card {
+    height: 350px;
+  }
+  .restaurant-layout .food-card .food-img {
+    height: 80% !important;
+  }
+  .restaurant-layout .food-card .food-img div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .restaurant-layout .food-card .food-text {
+    height: 20% !important;
+  }
+  .restaurant-layout .food-card .food-text .info-food {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .restaurant-layout .home_header {
+    height: auto !important;
+    padding: 1rem !important;
+  }
+  .restaurant-layout .home_header .home_logo img {
+    width: 12rem !important;
+  }
+  .restaurant-layout .hero h1 {
+    font-size: 2.5rem !important;
+  }
+  .restaurant-layout .hero p {
+    font-size: 1.5rem !important;
+  }
+  .restaurant-layout .btn-pink {
+    padding: 1.5rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+  }
+  .restaurant-layout .filter h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem !important;
+  }
+  .restaurant-layout .filter .filter-card .filter-text p {
+    font-size: 1.5rem !important;
+    margin-top: 1rem !important;
+  }
+  .restaurant-layout .filter .filter-card .filter-icon i {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (min-width: 2560px) {
+  /* Header */
+  .home_header {
+    height: 100px !important;
+  }
+  .home_header .home_logo img {
+    width: 15rem !important;
+  }
+  /* City */
+  .city {
+    height: auto !important;
+  }
+  .city i {
+    font-size: 1.6rem !important;
+    padding: 0.8rem 0 !important;
+    margin-right: 0.5rem !important;
+  }
+  .city p {
+    font-size: 1.6rem !important;
+    padding: 0.8rem 0 !important;
+  }
+  /* Hero */
+  .hero {
+    height: 600px !important;
+  }
+  .hero h1 {
+    font-size: 3.5rem !important;
+  }
+  .hero p {
+    font-size: 2rem !important;
+    margin-top: 1rem !important;
+  }
+  /* Hero btn */
+  .btn-pink {
+    font-size: 1.7rem !important;
+  }
+  /* Filter */
+  .filter h2 {
+    font-size: 2.5rem !important;
+  }
+  .filter .filter-card {
+    width: 50% !important;
+  }
+  .filter .filter-card .filter-icon i {
+    font-size: 4rem !important;
+  }
+  .filter .filter-card .filter-text p {
+    margin-top: 1rem !important;
+    font-size: 1.8rem !important;
+  }
+  .filter .filter-card .number {
+    font-size: 1.5rem !important;
+    border-radius: 50px !important;
+    top: -20px !important;
+  }
+  /* Menu */
+  .food-card {
+    height: 600px !important;
+  }
+  .food-card .food-text .info-food h3 {
+    font-size: 2rem !important;
+  }
+  .food-card .food-text .info-food p {
+    font-size: 1.6rem !important;
+  }
+  .food-card .like-food i {
+    font-size: 2.5rem !important;
+  }
+  /* Footer */
+  footer nav .logo-link {
+    font-size: 3.5rem !important;
+  }
+  footer nav ul li {
+    font-size: 1.8rem;
   }
 }
 

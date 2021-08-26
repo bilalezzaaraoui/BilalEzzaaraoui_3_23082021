@@ -1,23 +1,35 @@
+@use 'config';
+
 $mobile-s: 320px;
 $mobile-m: 375px;
 $mobile-l: 425px;
 $tablette: 768px;
 $laptop: 1024px;
 $laptop-l: 1440px;
+$desktop-4k: 2560px;
 
 /* Le sité à été créer sur un modèle "mobile-m" */
-
-@media (min-width: 290px) and (max-width: 319px) {
+@media (min-width: 290px,) and (max-width: 319px,) {
   /* --Index.html-- */
   /* Section filtre */
-  .filter-card .filter-text p {
-    font-size: 0.9rem;
+  .filter-card {
+    .filter-text {
+      p {
+        font-size: 0.9rem;
+      }
+    }
   }
 
   /* Section Menu */
-  .restaurant-layout .food-card .food-img img {
-    position: static !important;
-    /* bottom: 1rem; */
+  .restaurant-layout {
+    .food-card {
+      .food-img {
+        img {
+          position: static !important;
+          /* bottom: 1rem; */
+        }
+      }
+    }
   }
 
   /* --Page Menu-- */
@@ -47,6 +59,13 @@ $laptop-l: 1440px;
 }
 
 @media (min-width: $mobile-s) {
+  .food-card {
+    .food-img {
+      img {
+        position: initial !important;
+      }
+    }
+  }
   /* --Page Menu-- */
   .menu-margin-1 {
     bottom: 5.5rem;
@@ -122,7 +141,7 @@ $laptop-l: 1440px;
 @media (min-width: $tablette) {
   /* --Index-- */
   .hero {
-    height: 350px !important;
+    height: 350px;
 
     h1 {
       font-size: 1.8rem !important;
@@ -140,7 +159,7 @@ $laptop-l: 1440px;
       @include flexCenter;
 
       .filter-icon i {
-        font-size: 2.5rem !important;
+        font-size: 2rem;
       }
 
       .filter-text p {
@@ -179,5 +198,249 @@ $laptop-l: 1440px;
 @media (min-width: $laptop) {
   .filter-text {
     justify-content: center;
+  }
+
+  .grid-menu {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .number {
+    font-size: 1rem !important;
+  }
+
+  .city {
+    i {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .food-text {
+    .info-food {
+      h3 {
+        font-size: 1rem;
+      }
+    }
+
+    .like-food {
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .food-img {
+    img {
+      height: 100% !important;
+      position: static !important;
+    }
+
+    .index-img-2 {
+      height: auto !important;
+      position: relative !important;
+    }
+  }
+
+  /* Page Menu */
+
+  main {
+    .menu-hero {
+      height: 500px !important;
+      overflow: hidden;
+    }
+
+    .menu {
+      max-width: 70%;
+      margin: auto;
+      bottom: 20rem !important;
+      margin-bottom: -20rem !important;
+    }
+  }
+}
+
+@media (min-width: $laptop-l) {
+  .restaurant-layout {
+    .food-card {
+      height: 350px;
+
+      .food-img {
+        height: 80% !important;
+
+        div {
+          @include flexCenter;
+        }
+      }
+
+      .food-text {
+        height: 20% !important;
+        .info-food {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+
+    .home_header {
+      height: auto !important;
+      padding: 1rem !important;
+      .home_logo {
+        img {
+          width: 12rem !important;
+        }
+      }
+    }
+
+    .hero {
+      h1 {
+        font-size: 2.5rem !important;
+      }
+
+      p {
+        font-size: 1.5rem !important;
+      }
+    }
+
+    .btn-pink {
+      padding: 1.5rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+    }
+
+    .filter {
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem !important;
+      }
+
+      .filter-card {
+        .filter-text {
+          p {
+            font-size: 1.5rem !important;
+            margin-top: 1rem !important;
+          }
+        }
+
+        .filter-icon {
+          i {
+            font-size: 2.5rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $desktop-4k) {
+  /* Header */
+  .home_header {
+    height: 100px !important;
+
+    .home_logo {
+      img {
+        width: 15rem !important;
+      }
+    }
+  }
+
+  /* City */
+
+  .city {
+    height: auto !important;
+    i {
+      font-size: 1.6rem !important;
+      padding: 0.8rem 0 !important;
+      margin-right: 0.5rem !important;
+    }
+
+    p {
+      font-size: 1.6rem !important;
+      padding: 0.8rem 0 !important;
+    }
+  }
+
+  /* Hero */
+  .hero {
+    height: 600px !important;
+
+    h1 {
+      font-size: 3.5rem !important;
+    }
+
+    p {
+      font-size: 2rem !important;
+      margin-top: 1rem !important;
+    }
+  }
+  /* Hero btn */
+  .btn-pink {
+    font-size: 1.7rem !important;
+  }
+  /* Filter */
+  .filter {
+    h2 {
+      font-size: 2.5rem !important;
+    }
+
+    .filter-card {
+      width: 50% !important;
+
+      .filter-icon {
+        i {
+          font-size: 4rem !important;
+        }
+      }
+
+      .filter-text {
+        p {
+          margin-top: 1rem !important;
+          font-size: 1.8rem !important;
+        }
+      }
+
+      .number {
+        font-size: 1.5rem !important;
+        border-radius: 50px !important;
+        top: -20px !important;
+      }
+    }
+  }
+
+  /* Menu */
+  .food-card {
+    height: 600px !important;
+    .food-text {
+      .info-food {
+        h3 {
+          font-size: 2rem !important;
+        }
+
+        p {
+          font-size: 1.6rem !important;
+        }
+      }
+    }
+    .like-food {
+      i {
+        font-size: 2.5rem !important;
+      }
+    }
+  }
+
+  /* Footer */
+  footer {
+    nav {
+      .logo-link {
+        font-size: 3.5rem !important ;
+      }
+
+      ul {
+        li {
+          font-size: 1.8rem;
+        }
+      }
+    }
   }
 }
