@@ -119,6 +119,110 @@ footer nav ul li a {
   .menu-title h2 {
     font-size: 1.4rem !important;
   }
+  /* Boutton panier à partir de 320px */
+  .menu-price-text {
+    width: 80% !important;
+  }
+  .menu-price-info {
+    width: 20% !important;
+  }
+  .menu-price-info p {
+    padding-right: 0;
+  }
+  .menu-price-order {
+    width: 3rem !important;
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+  }
+  .menu-price:hover-text {
+    width: auto !important;
+  }
+  -info {
+    -webkit-animation-name: price;
+            animation-name: price;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  @-webkit-keyframes price {
+    0% {
+      width: 30%;
+    }
+    100% {
+      width: calc(40% - 5rem);
+    }
+  }
+  @keyframes price {
+    0% {
+      width: 30%;
+    }
+    100% {
+      width: calc(40% - 5rem);
+    }
+  }
+  -order {
+    -webkit-animation-name: check;
+            animation-name: check;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  @-webkit-keyframes check {
+    0% {
+      -webkit-transform: translateX(5rem);
+              transform: translateX(5rem);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes check {
+    0% {
+      -webkit-transform: translateX(5rem);
+              transform: translateX(5rem);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  -order i {
+    -webkit-animation-name: rotation;
+            animation-name: rotation;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  @-webkit-keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotation {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
 }
 
 @media (min-width: 375px) {
@@ -557,6 +661,61 @@ main .menu-card-info .menu-price-info p {
   padding-right: 1rem;
 }
 
+main .menu-card-info .menu-price-order {
+  width: 5rem;
+  height: 100%;
+  background-color: #99e2d0;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  -webkit-transform: translateX(5rem);
+          transform: translateX(5rem);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .menu-card-info .menu-price-order i {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+main .menu-card-info .menu-price:hover .menu-price-text {
+  -webkit-animation-name: info;
+          animation-name: info;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes info {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes info {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
 main .menu-card-info .menu-price:hover .menu-price-info {
   -webkit-animation-name: price;
           animation-name: price;
@@ -573,7 +732,7 @@ main .menu-card-info .menu-price:hover .menu-price-info {
     width: 30%;
   }
   100% {
-    width: 20%;
+    width: calc(40% - 5rem);
   }
 }
 
@@ -582,7 +741,7 @@ main .menu-card-info .menu-price:hover .menu-price-info {
     width: 30%;
   }
   100% {
-    width: 20%;
+    width: calc(40% - 5rem);
   }
 }
 
@@ -599,8 +758,8 @@ main .menu-card-info .menu-price:hover .menu-price-order {
 
 @-webkit-keyframes check {
   0% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -610,8 +769,8 @@ main .menu-card-info .menu-price:hover .menu-price-order {
 
 @keyframes check {
   0% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -650,32 +809,6 @@ main .menu-card-info .menu-price:hover .menu-price-order i {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}
-
-main .menu-card-info .menu-price-order {
-  width: 100px;
-  height: 100%;
-  background-color: #99e2d0;
-  position: absolute;
-  top: 0;
-  right: 0px;
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .menu-card-info .menu-price-order i {
-  color: #fff;
-  font-size: 1.2rem;
 }
 
 main .btn-layout {

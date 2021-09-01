@@ -91,6 +91,96 @@ $desktop-4k: 2560px;
   .menu-title h2 {
     font-size: 1.4rem !important;
   }
+
+  /* Boutton panier à partir de 320px */
+  .menu-price {
+    &-text {
+      width: 80% !important;
+    }
+
+    &-info {
+      width: 20% !important;
+
+      p {
+        padding-right: 0;
+      }
+    }
+
+    &-order {
+      width: 3rem !important;
+      transform: translateX(3rem);
+    }
+  }
+
+  .menu-price:hover {
+    &-text {
+      width: auto !important;
+      // animation-name: info;
+      // animation-duration: 0.5s;
+      // animation-fill-mode: forwards;
+      // animation-timing-function: linear;
+
+      // @keyframes info {
+      //   0% {
+      //     width: 70%;
+      //   }
+
+      //   100% {
+      //     width: 30% !important;
+      //   }
+    }
+  }
+
+  &-info {
+    animation-name: price;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+
+    @keyframes price {
+      0% {
+        width: 30%;
+      }
+
+      100% {
+        width: calc(40% - 5rem);
+      }
+    }
+  }
+
+  &-order {
+    animation-name: check;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+
+    @keyframes check {
+      0% {
+        transform: translateX(5rem);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    i {
+      animation-name: rotation;
+      animation-duration: 0.6s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: $mobile-m) {

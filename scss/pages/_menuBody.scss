@@ -115,7 +115,41 @@ main {
           }
         }
 
+        &-order {
+          width: 5rem;
+          height: 100%;
+          background-color: $third-color;
+          position: absolute;
+          top: 0;
+          right: 0px;
+          transform: translateX(5rem);
+          cursor: pointer;
+          @include flexCenter;
+
+          i {
+            color: $white-color;
+            font-size: 1.2rem;
+          }
+        }
+
         &:hover {
+          .menu-price-text {
+            animation-name: info;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+
+            @keyframes info {
+              0% {
+                width: 70%;
+              }
+
+              100% {
+                width: 60%;
+              }
+            }
+          }
+
           .menu-price-info {
             animation-name: price;
             animation-duration: 0.5s;
@@ -128,7 +162,7 @@ main {
               }
 
               100% {
-                width: 20%;
+                width: calc(40% - 5rem);
               }
             }
           }
@@ -141,7 +175,7 @@ main {
 
             @keyframes check {
               0% {
-                transform: translateX(100px);
+                transform: translateX(5rem);
               }
 
               100% {
@@ -165,23 +199,6 @@ main {
                 }
               }
             }
-          }
-        }
-
-        &-order {
-          width: 100px;
-          height: 100%;
-          background-color: $third-color;
-          position: absolute;
-          top: 0;
-          right: 0px;
-          transform: translateX(100px);
-          cursor: pointer;
-          @include flexCenter;
-
-          i {
-            color: $white-color;
-            font-size: 1.2rem;
           }
         }
       }
