@@ -1,9 +1,11 @@
+@import "variables";
 @import "config";
-@import "buttons";
-@import "footer";
+@import "components/buttons";
+@import "components/footer";
 @import "mediaQueries";
-@import "menu/menuBody";
-@import "menu/menuHeader";
+@import "pages/menuBody";
+@import "pages/menuHeader";
+@import "mixin";
 
 body {
   font-family: "Roboto", sans-serif;
@@ -17,6 +19,112 @@ a {
 ul {
   list-style: none;
 }
+
+/* Loading Spinner */
+
+.spinner {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  opacity: 1;
+  @include flexCenter;
+  background-color: $footer-color;
+  animation-name: spinner;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  @keyframes spinner {
+    0% {
+      opacity: 1;
+    }
+
+    98% {
+      opacity: 0.99;
+    }
+
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  .container {
+    width: 15rem;
+    height: 15rem;
+    border: 0.8rem solid $first-color;
+    border-radius: 50%;
+    @include flexCenter;
+    animation-name: circle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+    @keyframes circle {
+      0% {
+        border-top-color: $first-color;
+        transform: scale(1);
+      }
+
+      25% {
+        border-color: $second-color;
+        transform: scale(1.1);
+      }
+
+      50% {
+        border-color: $third-color;
+        transform: scale(1.2);
+      }
+
+      75% {
+        border-color: $second-color;
+        transform: scale(1.1);
+      }
+
+      100% {
+        border-color: $first-color;
+        transform: scale(1);
+        display: none;
+      }
+    }
+
+    p {
+      color: $white-color;
+      font-size: 2rem;
+      font-family: Shrikhand;
+      animation-name: texte;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+
+    @keyframes texte {
+      0% {
+        color: $first-color;
+      }
+
+      25% {
+        color: $second-color;
+      }
+
+      50% {
+        color: $third-color;
+      }
+
+      75% {
+        color: $second-color;
+      }
+
+      100% {
+        color: $first-color;
+      }
+    }
+  }
+}
+/* Header */
 
 .home_header {
   width: 100%;
@@ -74,6 +182,11 @@ ul {
 
   .btn-food {
     margin: 1.5rem 0 2.5rem;
+    transition: 1s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -221,6 +334,12 @@ ul {
 
           i {
             font-size: 1.4rem;
+
+            &:hover {
+              font-weight: 600;
+              transform: scale(1.05);
+              color: rgba(207, 105, 219, 1);
+            }
           }
         }
       }

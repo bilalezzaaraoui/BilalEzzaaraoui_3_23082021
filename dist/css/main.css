@@ -10,25 +10,25 @@
 
 .btn-pink {
   border: none;
-  background: #ff79da;
-  background: linear-gradient(165deg, #ff79da 4%, #cf69db 50%, #9356dc 100%);
+  background: #ff4bcc;
+  background: linear-gradient(165deg, #ff4bcc 4%, #cf69db 50%, #9356dc 100%);
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
   border-radius: 25px;
   color: #fff;
   font-weight: 700;
+}
+
+.btn-pink:hover {
+  background: #ff79da;
+  background: linear-gradient(165deg, #ff79da 4%, #cf69db 50%, #833bdb 100%);
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Couleurs */
 /* Layout */
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 footer {
   width: 100%;
   height: auto;
@@ -59,7 +59,8 @@ footer nav ul li a {
   color: #fff;
 }
 
-@use 'config';
+@use 'mixin';
+@use 'variables';
 /* Le sité à été créer sur un modèle "mobile-m" */
 @media (min-width: 290px) and (max-width: 319px) {
   /* --Index.html-- */
@@ -412,22 +413,18 @@ footer nav ul li a {
   }
 }
 
-/* Couleurs */
-/* Layout */
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
+@use "../mixin";
+@use "../variables";
 main {
   overflow: hidden;
 }
 
 main .menu-hero {
+  display: block;
   width: 100%;
   height: 280px;
+  -webkit-clip-path: ellipse(105% 100% at 50% 0%);
+          clip-path: ellipse(105% 100% at 50% 0%);
   z-index: -1;
 }
 
@@ -479,6 +476,15 @@ main .menu-title i {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.3rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .menu-title i:hover {
+  font-weight: 600;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #cf69db;
 }
 
 main .menu-card-info {
@@ -503,11 +509,13 @@ main .menu-card-info .menu-price {
   width: 100%;
   height: auto;
   margin: 0.8rem 0;
+  overflow: hidden;
   background-color: #fff;
-  padding: 0.7rem 0.5rem;
+  padding: 0.8rem 0.6rem;
   border-radius: 15px;
   -webkit-box-shadow: 0 3px 4px -4px gray;
           box-shadow: 0 3px 4px -4px gray;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -549,7 +557,128 @@ main .menu-card-info .menu-price-info p {
   padding-right: 1rem;
 }
 
-main .menu .btn-layout {
+main .menu-card-info .menu-price:hover .menu-price-info {
+  -webkit-animation-name: price;
+          animation-name: price;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes price {
+  0% {
+    width: 30%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes price {
+  0% {
+    width: 30%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+main .menu-card-info .menu-price:hover .menu-price-order {
+  -webkit-animation-name: check;
+          animation-name: check;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes check {
+  0% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes check {
+  0% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+main .menu-card-info .menu-price:hover .menu-price-order i {
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+main .menu-card-info .menu-price-order {
+  width: 100px;
+  height: 100%;
+  background-color: #99e2d0;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .menu-card-info .menu-price-order i {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+main .btn-layout {
   margin: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,25 +691,17 @@ main .menu .btn-layout {
           align-items: center;
 }
 
-main .menu .btn-layout .btn-menu {
+main .btn-layout .btn-menu {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-main .menu .btn-layout .btn-menu:hover {
+main .btn-layout .btn-menu:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-/* Couleurs */
-/* Layout */
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
+@use "../mixin";
 .menu_header {
   width: 100%;
   height: 60px;
@@ -637,6 +758,197 @@ ul {
   list-style: none;
 }
 
+/* Loading Spinner */
+.spinner {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #353535;
+  -webkit-animation-name: spinner;
+          animation-name: spinner;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0.99;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0.99;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.spinner .container {
+  width: 15rem;
+  height: 15rem;
+  border: 0.8rem solid #9356dc;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-name: circle;
+          animation-name: circle;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    border-top-color: #9356dc;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    border-color: #ff79da;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    border-color: #99e2d0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  75% {
+    border-color: #ff79da;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    border-color: #9356dc;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: none;
+  }
+}
+
+@keyframes circle {
+  0% {
+    border-top-color: #9356dc;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    border-color: #ff79da;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    border-color: #99e2d0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  75% {
+    border-color: #ff79da;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    border-color: #9356dc;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: none;
+  }
+}
+
+.spinner .container p {
+  color: #fff;
+  font-size: 2rem;
+  font-family: Shrikhand;
+  -webkit-animation-name: texte;
+          animation-name: texte;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes texte {
+  0% {
+    color: #9356dc;
+  }
+  25% {
+    color: #ff79da;
+  }
+  50% {
+    color: #99e2d0;
+  }
+  75% {
+    color: #ff79da;
+  }
+  100% {
+    color: #9356dc;
+  }
+}
+
+@keyframes texte {
+  0% {
+    color: #9356dc;
+  }
+  25% {
+    color: #ff79da;
+  }
+  50% {
+    color: #99e2d0;
+  }
+  75% {
+    color: #ff79da;
+  }
+  100% {
+    color: #9356dc;
+  }
+}
+
+/* Header */
 .home_header {
   width: 100%;
   height: 60px;
@@ -730,6 +1042,13 @@ ul {
 
 .hero .btn-food {
   margin: 1.5rem 0 2.5rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.hero .btn-food:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .filter {
@@ -920,5 +1239,12 @@ ul {
 
 .restaurant-layout .food-card .food-text .like-food i {
   font-size: 1.4rem;
+}
+
+.restaurant-layout .food-card .food-text .like-food i:hover {
+  font-weight: 600;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #cf69db;
 }
 /*# sourceMappingURL=main.css.map */

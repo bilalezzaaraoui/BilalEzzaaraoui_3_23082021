@@ -1,4 +1,5 @@
-@use 'config';
+@use 'mixin';
+@use 'variables';
 
 $mobile-s: 320px;
 $mobile-m: 375px;
