@@ -604,14 +604,13 @@ main .menu-card-info h3 {
 main .menu-card-info span {
   display: block;
   margin: 0.2rem 0rem 0 0.2rem;
-  width: 15%;
+  width: 10%;
   height: 3px;
   background-color: #99e2d0;
 }
 
-main .menu-card-info .menu-price {
-  width: 100%;
-  height: auto;
+main .menu-card-info .card {
+  min-width: 95%;
   margin: 0.8rem 0;
   overflow: hidden;
   background-color: #fff;
@@ -620,57 +619,83 @@ main .menu-card-info .menu-price {
   -webkit-box-shadow: 0 3px 4px -4px gray;
           box-shadow: 0 3px 4px -4px gray;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-animation-name: progress;
+          animation-name: progress;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /* Hover de la carte */
 }
 
-main .menu-card-info .menu-price-text {
-  width: 70%;
-  height: 100%;
+@-webkit-keyframes progress {
+  0% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-main .menu-card-info .menu-price-text h4 {
+@keyframes progress {
+  0% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+main .menu-card-info .card-text h4 {
+  line-height: 1.8rem;
+  width: calc(100% - 60px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-main .menu-card-info .menu-price-text p {
-  margin-top: 0.3rem;
+main .menu-card-info .card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .menu-card-info .card-info .ligne_1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-main .menu-card-info .menu-price-info {
-  width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-main .menu-card-info .menu-price-info p {
-  font-weight: 500;
+main .menu-card-info .card-info .ligne_2 {
+  font-weight: 600;
   padding-right: 1rem;
 }
 
-main .menu-card-info .menu-price-order {
-  width: 5rem;
-  height: 100%;
-  background-color: #99e2d0;
+main .menu-card-info .card-order {
   position: absolute;
   top: 0;
   right: 0px;
-  -webkit-transform: translateX(5rem);
-          transform: translateX(5rem);
-  cursor: pointer;
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
+  width: 60px;
+  height: 100%;
+  background-color: #99e2d0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,18 +705,19 @@ main .menu-card-info .menu-price-order {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
-main .menu-card-info .menu-price-order i {
+main .menu-card-info .card-order i {
   color: #fff;
   font-size: 1.2rem;
 }
 
-main .menu-card-info .menu-price:hover .menu-price-text {
+main .menu-card-info .card:hover .card-info {
   -webkit-animation-name: info;
           animation-name: info;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: linear;
@@ -700,66 +726,37 @@ main .menu-card-info .menu-price:hover .menu-price-text {
 
 @-webkit-keyframes info {
   0% {
-    width: 70%;
+    width: 100%;
   }
   100% {
-    width: 60%;
+    width: calc(100% - 60px);
   }
 }
 
 @keyframes info {
   0% {
-    width: 70%;
+    width: 100%;
   }
   100% {
-    width: 60%;
+    width: calc(100% - 60px);
   }
 }
 
-main .menu-card-info .menu-price:hover .menu-price-info {
-  -webkit-animation-name: price;
-          animation-name: price;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+main .menu-card-info .card:hover .card-order {
+  -webkit-animation-name: order;
+          animation-name: order;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-}
-
-@-webkit-keyframes price {
-  0% {
-    width: 30%;
-  }
-  100% {
-    width: calc(40% - 5rem);
-  }
-}
-
-@keyframes price {
-  0% {
-    width: 30%;
-  }
-  100% {
-    width: calc(40% - 5rem);
-  }
-}
-
-main .menu-card-info .menu-price:hover .menu-price-order {
-  -webkit-animation-name: check;
-          animation-name: check;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
 }
 
-@-webkit-keyframes check {
+@-webkit-keyframes order {
   0% {
-    -webkit-transform: translateX(5rem);
-            transform: translateX(5rem);
+    -webkit-transform: translateX(60px);
+            transform: translateX(60px);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -767,10 +764,10 @@ main .menu-card-info .menu-price:hover .menu-price-order {
   }
 }
 
-@keyframes check {
+@keyframes order {
   0% {
-    -webkit-transform: translateX(5rem);
-            transform: translateX(5rem);
+    -webkit-transform: translateX(60px);
+            transform: translateX(60px);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -778,15 +775,15 @@ main .menu-card-info .menu-price:hover .menu-price-order {
   }
 }
 
-main .menu-card-info .menu-price:hover .menu-price-order i {
+main .menu-card-info .card:hover .card-order i {
   -webkit-animation-name: rotation;
           animation-name: rotation;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes rotation {
@@ -809,6 +806,26 @@ main .menu-card-info .menu-price:hover .menu-price-order i {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+main .menu-card-info .card-1 {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+main .menu-card-info .card-2 {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+
+main .menu-card-info .card-3 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+main .menu-card-info .card-4 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 
 main .btn-layout {

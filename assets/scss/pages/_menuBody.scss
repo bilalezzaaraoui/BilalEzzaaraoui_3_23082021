@@ -68,14 +68,13 @@ main {
       span {
         display: block;
         margin: 0.2rem 0rem 0 0.2rem;
-        width: 15%;
+        width: 10%;
         height: 3px;
         background-color: $third-color;
       }
 
-      .menu-price {
-        width: 100%;
-        height: auto;
+      .card {
+        min-width: 95%;
         margin: 0.8rem 0;
         overflow: hidden;
         background-color: $white-color;
@@ -83,20 +82,28 @@ main {
         border-radius: 15px;
         box-shadow: 0 3px 4px -4px gray;
         position: relative;
-        display: flex;
-
-        &-text {
-          width: 70%;
-          height: 100%;
-
-          h4 {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        transform: translateY(40px);
+        opacity: 0;
+        animation-name: progress;
+        animation-duration: 0.9s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        @keyframes progress {
+          0% {
+            transform: translateY(40px);
+            opacity: 0;
           }
 
-          p {
-            margin-top: 0.3rem;
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        &-text {
+          h4 {
+            line-height: 1.8rem;
+            width: calc(100% - 60px);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -104,27 +111,31 @@ main {
         }
 
         &-info {
-          width: 30%;
           display: flex;
-          justify-content: flex-end;
-          align-items: flex-end;
+          justify-content: space-between;
 
-          p {
-            font-weight: 500;
+          .ligne_1 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .ligne_2 {
+            font-weight: 600;
             padding-right: 1rem;
           }
         }
 
         &-order {
-          width: 5rem;
-          height: 100%;
-          background-color: $third-color;
           position: absolute;
           top: 0;
           right: 0px;
-          transform: translateX(5rem);
-          cursor: pointer;
+          transform: translateX(60px);
+          width: 60px;
+          height: 100%;
+          background-color: $third-color;
           @include flexCenter;
+          cursor: pointer;
 
           i {
             color: $white-color;
@@ -132,50 +143,34 @@ main {
           }
         }
 
+        /* Hover de la carte */
+
         &:hover {
-          .menu-price-text {
+          .card-info {
             animation-name: info;
-            animation-duration: 0.5s;
+            animation-duration: 0.4s;
             animation-fill-mode: forwards;
             animation-timing-function: linear;
 
             @keyframes info {
               0% {
-                width: 70%;
+                width: 100%;
               }
 
               100% {
-                width: 60%;
+                width: calc(100% - 60px);
               }
             }
           }
-
-          .menu-price-info {
-            animation-name: price;
-            animation-duration: 0.5s;
-            animation-fill-mode: forwards;
+          .card-order {
+            animation-name: order;
+            animation-duration: 0.4s;
             animation-timing-function: linear;
-
-            @keyframes price {
-              0% {
-                width: 30%;
-              }
-
-              100% {
-                width: calc(40% - 5rem);
-              }
-            }
-          }
-
-          .menu-price-order {
-            animation-name: check;
-            animation-duration: 0.5s;
             animation-fill-mode: forwards;
-            animation-timing-function: linear;
 
-            @keyframes check {
+            @keyframes order {
               0% {
-                transform: translateX(5rem);
+                transform: translateX(60px);
               }
 
               100% {
@@ -185,9 +180,9 @@ main {
 
             i {
               animation-name: rotation;
-              animation-duration: 0.6s;
-              animation-fill-mode: forwards;
+              animation-duration: 0.4s;
               animation-timing-function: linear;
+              animation-fill-mode: forwards;
 
               @keyframes rotation {
                 0% {
@@ -201,6 +196,22 @@ main {
             }
           }
         }
+      }
+
+      .card-1 {
+        animation-delay: 0.15s;
+      }
+
+      .card-2 {
+        animation-delay: 0.35s;
+      }
+
+      .card-3 {
+        animation-delay: 0.8s;
+      }
+
+      .card-4 {
+        animation-delay: 1.6s;
       }
     }
   }
