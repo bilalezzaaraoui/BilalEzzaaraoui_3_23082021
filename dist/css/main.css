@@ -96,132 +96,34 @@ footer nav ul li a {
 }
 
 @media (min-width: 320px) {
+  .hero h1 {
+    padding: 0 10% !important;
+  }
   .food-card .food-img img {
     position: initial !important;
   }
   /* --Page Menu-- */
   .menu-margin-1 {
-    bottom: 5.5rem;
-    margin-bottom: -5.5rem;
+    bottom: 7.5rem;
+    margin-bottom: -7.5rem;
   }
   .menu-margin-2 {
-    bottom: 2.5rem;
-    margin-bottom: -2.5rem;
+    bottom: 5rem;
+    margin-bottom: -5rem;
   }
   .menu-margin-3 {
-    bottom: 5rem;
-    margin-bottom: -5rem;
+    bottom: 6rem;
+    margin-bottom: -6rem;
   }
   .menu-margin-4 {
-    bottom: 5rem;
-    margin-bottom: -5rem;
+    bottom: 6rem;
+    margin-bottom: -6rem;
   }
   .menu-title h2 {
     font-size: 1.4rem !important;
   }
-  /* Boutton panier à partir de 320px */
-  .menu-price-text {
-    width: 80% !important;
-  }
-  .menu-price-info {
+  .menu-card-info span {
     width: 20% !important;
-  }
-  .menu-price-info p {
-    padding-right: 0;
-  }
-  .menu-price-order {
-    width: 3rem !important;
-    -webkit-transform: translateX(3rem);
-            transform: translateX(3rem);
-  }
-  .menu-price:hover-text {
-    width: auto !important;
-  }
-  -info {
-    -webkit-animation-name: price;
-            animation-name: price;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-  }
-  @-webkit-keyframes price {
-    0% {
-      width: 30%;
-    }
-    100% {
-      width: calc(40% - 5rem);
-    }
-  }
-  @keyframes price {
-    0% {
-      width: 30%;
-    }
-    100% {
-      width: calc(40% - 5rem);
-    }
-  }
-  -order {
-    -webkit-animation-name: check;
-            animation-name: check;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-  }
-  @-webkit-keyframes check {
-    0% {
-      -webkit-transform: translateX(5rem);
-              transform: translateX(5rem);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-  }
-  @keyframes check {
-    0% {
-      -webkit-transform: translateX(5rem);
-              transform: translateX(5rem);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-  }
-  -order i {
-    -webkit-animation-name: rotation;
-            animation-name: rotation;
-    -webkit-animation-duration: 0.6s;
-            animation-duration: 0.6s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-  }
-  @-webkit-keyframes rotation {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-  @keyframes rotation {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
   }
 }
 
@@ -246,6 +148,9 @@ footer nav ul li a {
 }
 
 @media (min-width: 425px) {
+  .hero {
+    height: 280px !important;
+  }
   /* --Page Menu-- */
   .menu-margin-1 {
     bottom: 3rem;
@@ -320,6 +225,9 @@ footer nav ul li a {
     grid-column-gap: 30px;
     grid-row-gap: 15px;
   }
+  .menu-card-info span {
+    width: 10% !important;
+  }
   /* Footer */
   footer nav ul {
     display: -ms-grid;
@@ -331,6 +239,12 @@ footer nav ul li a {
 }
 
 @media (min-width: 1024px) {
+  .hero {
+    height: 380px !important;
+  }
+  .hero h1 {
+    font-size: 2.2rem !important;
+  }
   .filter-text {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -349,30 +263,33 @@ footer nav ul li a {
   .city p {
     font-size: 1.2rem;
   }
-  .food-text .info-food h3 {
+  .food-card {
+    height: 350px !important;
+  }
+  .food-card .food-text .info-food h3 {
     font-size: 1rem;
   }
-  .food-text .like-food i {
+  .food-card .food-text .like-food i {
     font-size: 1.2rem;
   }
-  .food-img img {
+  .food-card .food-img img {
     height: 100% !important;
     position: static !important;
   }
-  .food-img .index-img-2 {
+  .food-card .food-img .index-img-2 {
     height: auto !important;
     position: relative !important;
   }
   /* Page Menu */
   main .menu-hero {
-    height: 500px !important;
+    height: 800px !important;
     overflow: hidden;
   }
   main .menu {
     max-width: 70%;
     margin: auto;
-    bottom: 20rem !important;
-    margin-bottom: -20rem !important;
+    bottom: 45rem !important;
+    margin-bottom: -45rem !important;
   }
 }
 
@@ -438,6 +355,21 @@ footer nav ul li a {
   .restaurant-layout .filter .filter-card .filter-icon i {
     font-size: 2.5rem !important;
   }
+  .menu .menu-title h2 {
+    font-size: 1.7rem !important;
+  }
+  .menu .menu-title i {
+    font-size: 1.7rem !important;
+  }
+  .menu .menu-card-info span {
+    width: 5% !important;
+  }
+  .menu .menu-card-info .card-text h4 {
+    font-size: 1.2rem;
+  }
+  .menu .menu-card-info .card-info .ligne_2 {
+    font-size: 1.1em;
+  }
 }
 
 @media (min-width: 2560px) {
@@ -479,18 +411,19 @@ footer nav ul li a {
   /* Filter */
   .filter h2 {
     font-size: 2.5rem !important;
+    margin-bottom: 3rem !important;
   }
-  .filter .filter-card {
+  .filter-card {
     width: 50% !important;
   }
-  .filter .filter-card .filter-icon i {
+  .filter-card .filter-icon i {
     font-size: 4rem !important;
   }
-  .filter .filter-card .filter-text p {
+  .filter-card .filter-text p {
     margin-top: 1rem !important;
     font-size: 1.8rem !important;
   }
-  .filter .filter-card .number {
+  .filter-card .number {
     font-size: 1.5rem !important;
     border-radius: 50px !important;
     top: -20px !important;
@@ -498,6 +431,9 @@ footer nav ul li a {
   /* Menu */
   .food-card {
     height: 600px !important;
+  }
+  .food-card .food-img div p {
+    font-size: 1.7rem !important;
   }
   .food-card .food-text .info-food h3 {
     font-size: 2rem !important;
@@ -573,12 +509,9 @@ main .menu-title i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   font-size: 1.3rem;
   -webkit-transition: 1s;
   transition: 1s;
