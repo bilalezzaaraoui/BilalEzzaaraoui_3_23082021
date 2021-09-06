@@ -1,5 +1,5 @@
-@use 'mixin';
-@use 'variables';
+@import "mixin";
+@import "variables";
 
 $mobile-s: 320px;
 $mobile-m: 375px;
@@ -7,7 +7,7 @@ $mobile-l: 425px;
 $tablette: 768px;
 $laptop: 1024px;
 $laptop-l: 1440px;
-$desktop-4k: 2560px;
+$desktop-4k: 2460px;
 
 /* Le sité à été créer sur un modèle "mobile-m" */
 @media (min-width: 290px,) and (max-width: 319px,) {
@@ -243,13 +243,13 @@ $desktop-4k: 2560px;
       font-size: 1.2rem;
     }
 
-    p {
+    h2 {
       font-size: 1.2rem;
     }
   }
 
   .food-card {
-    height: 350px !important;
+    height: 250px !important;
     .food-text {
       .info-food {
         h3 {
@@ -297,7 +297,7 @@ $desktop-4k: 2560px;
 @media (min-width: $laptop-l) {
   .restaurant-layout {
     .food-card {
-      height: 350px;
+      height: 350px !important;
 
       .food-img {
         height: 80% !important;
@@ -417,7 +417,7 @@ $desktop-4k: 2560px;
       margin-right: 0.5rem !important;
     }
 
-    p {
+    h2 {
       font-size: 1.6rem !important;
       padding: 0.8rem 0 !important;
     }
@@ -473,7 +473,7 @@ $desktop-4k: 2560px;
 
   /* Menu */
   .food-card {
-    height: 600px !important;
+    height: 700px !important;
 
     .food-img {
       div {
