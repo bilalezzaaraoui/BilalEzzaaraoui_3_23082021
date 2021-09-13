@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .btn-pink {
@@ -13,7 +13,7 @@
   background: #ff4bcc;
   background: linear-gradient(165deg, #ff4bcc 4%, #cf69db 50%, #9356dc 100%);
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
   border-radius: 25px;
   color: #fff;
@@ -24,7 +24,7 @@
   background: #ff79da;
   background: linear-gradient(165deg, #ff79da 4%, #cf69db 50%, #833bdb 100%);
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Couleurs */
@@ -182,24 +182,24 @@ footer nav ul li a {
   .filter-layout {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr) [3];
+    grid-template-columns: repeat(3, 1fr);
   }
   .filter-layout .filter-card {
     padding: 2rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .filter-layout .filter-card .filter-icon i {
     font-size: 2rem;
@@ -220,8 +220,8 @@ footer nav ul li a {
   .grid-menu {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 15px;
   }
@@ -232,8 +232,8 @@ footer nav ul li a {
   footer nav ul {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 5px;
   }
 }
@@ -247,12 +247,12 @@ footer nav ul li a {
   }
   .filter-text {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .grid-menu {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr) [4];
+    grid-template-columns: repeat(4, 1fr);
   }
   .number {
     font-size: 1rem !important;
@@ -305,11 +305,11 @@ footer nav ul li a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .restaurant-layout .food-card .food-text {
     height: 20% !important;
@@ -320,11 +320,11 @@ footer nav ul li a {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .restaurant-layout .home_header {
     height: auto !important;
@@ -464,7 +464,7 @@ main .menu-hero {
   width: 100%;
   height: 280px;
   -webkit-clip-path: ellipse(105% 100% at 50% 0%);
-          clip-path: ellipse(105% 100% at 50% 0%);
+  clip-path: ellipse(105% 100% at 50% 0%);
   z-index: -1;
 }
 
@@ -494,8 +494,8 @@ main .menu-title {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 main .menu-title h2 {
@@ -510,8 +510,8 @@ main .menu-title i {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   font-size: 1.3rem;
   -webkit-transition: 1s;
   transition: 1s;
@@ -520,7 +520,7 @@ main .menu-title i {
 main .menu-title i:hover {
   font-weight: 600;
   -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
   color: #cf69db;
 }
 
@@ -550,31 +550,31 @@ main .menu-card-info .card {
   padding: 0.8rem 0.6rem;
   border-radius: 15px;
   -webkit-box-shadow: 0 3px 4px -4px gray;
-          box-shadow: 0 3px 4px -4px gray;
+  box-shadow: 0 3px 4px -4px gray;
   position: relative;
   -webkit-transform: translateY(40px);
-          transform: translateY(40px);
+  transform: translateY(40px);
   opacity: 0;
   -webkit-animation-name: progress;
-          animation-name: progress;
+  animation-name: progress;
   -webkit-animation-duration: 0.9s;
-          animation-duration: 0.9s;
+  animation-duration: 0.9s;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   /* Hover de la carte */
 }
 
 @-webkit-keyframes progress {
   0% {
     -webkit-transform: translateY(40px);
-            transform: translateY(40px);
+    transform: translateY(40px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -582,12 +582,12 @@ main .menu-card-info .card {
 @keyframes progress {
   0% {
     -webkit-transform: translateY(40px);
-            transform: translateY(40px);
+    transform: translateY(40px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -605,8 +605,8 @@ main .menu-card-info .card-info {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 main .menu-card-info .card-info .ligne_1 {
@@ -625,7 +625,7 @@ main .menu-card-info .card-order {
   top: 0;
   right: 0px;
   -webkit-transform: translateX(60px);
-          transform: translateX(60px);
+  transform: translateX(60px);
   width: 60px;
   height: 100%;
   background-color: #99e2d0;
@@ -633,11 +633,11 @@ main .menu-card-info .card-order {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -648,13 +648,13 @@ main .menu-card-info .card-order i {
 
 main .menu-card-info .card:hover .card-info {
   -webkit-animation-name: info;
-          animation-name: info;
+  animation-name: info;
   -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
+  animation-duration: 0.4s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 @-webkit-keyframes info {
@@ -677,88 +677,88 @@ main .menu-card-info .card:hover .card-info {
 
 main .menu-card-info .card:hover .card-order {
   -webkit-animation-name: order;
-          animation-name: order;
+  animation-name: order;
   -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
+  animation-duration: 0.4s;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes order {
   0% {
     -webkit-transform: translateX(60px);
-            transform: translateX(60px);
+    transform: translateX(60px);
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 @keyframes order {
   0% {
     -webkit-transform: translateX(60px);
-            transform: translateX(60px);
+    transform: translateX(60px);
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 main .menu-card-info .card:hover .card-order i {
   -webkit-animation-name: rotation;
-          animation-name: rotation;
+  animation-name: rotation;
   -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
+  animation-duration: 0.4s;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes rotation {
   0% {
     -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes rotation {
   0% {
     -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 main .menu-card-info .card-1 {
   -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 
 main .menu-card-info .card-2 {
   -webkit-animation-delay: 0.35s;
-          animation-delay: 0.35s;
+  animation-delay: 0.35s;
 }
 
 main .menu-card-info .card-3 {
   -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 main .menu-card-info .card-4 {
   -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
 
 main .btn-layout {
@@ -767,11 +767,11 @@ main .btn-layout {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 main .btn-layout .btn-menu {
@@ -781,24 +781,24 @@ main .btn-layout .btn-menu {
 
 main .btn-layout .btn-menu:hover {
   -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .menu_header {
   width: 100%;
   height: 60px;
   -webkit-box-shadow: 0 3px 4px -4px gray;
-          box-shadow: 0 3px 4px -4px gray;
+  box-shadow: 0 3px 4px -4px gray;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu_header nav {
@@ -815,11 +815,11 @@ main .btn-layout .btn-menu:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu_header .home_logo img {
@@ -852,20 +852,20 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #353535;
   -webkit-animation-name: spinner;
-          animation-name: spinner;
+  animation-name: spinner;
   -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  animation-duration: 4s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 @-webkit-keyframes spinner {
@@ -903,48 +903,48 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-animation-name: circle;
-          animation-name: circle;
+  animation-name: circle;
   -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation-direction: alternate;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 @-webkit-keyframes circle {
   0% {
     border-top-color: #9356dc;
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   25% {
     border-color: #ff79da;
     -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
   }
   50% {
     border-color: #99e2d0;
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
   75% {
     border-color: #ff79da;
     -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
   }
   100% {
     border-color: #9356dc;
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     display: none;
   }
 }
@@ -953,27 +953,27 @@ ul {
   0% {
     border-top-color: #9356dc;
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   25% {
     border-color: #ff79da;
     -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
   }
   50% {
     border-color: #99e2d0;
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
   75% {
     border-color: #ff79da;
     -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
   }
   100% {
     border-color: #9356dc;
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     display: none;
   }
 }
@@ -983,15 +983,15 @@ ul {
   font-size: 2rem;
   font-family: Shrikhand;
   -webkit-animation-name: texte;
-          animation-name: texte;
+  animation-name: texte;
   -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation-direction: alternate;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 @-webkit-keyframes texte {
@@ -1035,16 +1035,16 @@ ul {
   width: 100%;
   height: 60px;
   -webkit-box-shadow: 0 3px 4px -4px gray;
-          box-shadow: 0 3px 4px -4px gray;
+  box-shadow: 0 3px 4px -4px gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .home_header .home_logo {
@@ -1052,11 +1052,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .home_header .home_logo img {
@@ -1072,11 +1072,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .city i {
@@ -1086,7 +1086,6 @@ ul {
 
 .city h2 {
   font-size: 0.9rem;
-  font-family: 400;
 }
 
 .hero {
@@ -1097,15 +1096,15 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .hero h1 {
@@ -1131,7 +1130,7 @@ ul {
 
 .hero .btn-food:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .filter {
@@ -1165,11 +1164,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .filter-card .filter-icon i {
@@ -1183,8 +1182,8 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .filter-card .filter-text p {
@@ -1230,8 +1229,9 @@ ul {
 .restaurant-layout .food-card {
   overflow: hidden;
   border-radius: 1rem;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 250px;
   margin-bottom: 1.5rem;
   display: -webkit-box;
@@ -1239,8 +1239,8 @@ ul {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .restaurant-layout .food-card .food-img {
@@ -1251,11 +1251,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
 }
 
@@ -1293,8 +1293,8 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .restaurant-layout .food-card .food-text .info-food {
@@ -1313,11 +1313,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .restaurant-layout .food-card .food-text .like-food i {
@@ -1327,7 +1327,7 @@ ul {
 .restaurant-layout .food-card .food-text .like-food i:hover {
   font-weight: 600;
   -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
   color: #cf69db;
 }
 /*# sourceMappingURL=main.css.map */
